@@ -280,33 +280,6 @@
             <p><strong>For changes or questions, call us at:</strong> +1(480)284-9648</p>
         </section>
     </main>
-
-    <script>
-        function updatePrice() {
-            const cheeseQty = parseInt(document.getElementById("cheese_qty").value) || 0;
-            const veggieQty = parseInt(document.getElementById("veggie_qty").value) || 0;
-            const chilliQty = parseInt(document.getElementById("chilli_paneer_qty").value) || 0;
-            const paneerQty = parseInt(document.getElementById("paneer_masala_qty").value) || 0;
-
-            let totalPrice = (cheeseQty * 10) + (veggieQty * 14) + (chilliQty * 18) + (paneerQty * 18);
-            document.getElementById("total-price").textContent = totalPrice.toFixed(2);
-
-            const pizzaDescription = [];
-            if (cheeseQty > 0) pizzaDescription.push(Cheese Pizza (14") x ${cheeseQty});
-            if (veggieQty > 0) pizzaDescription.push(Veggie Pizza (14") x ${veggieQty});
-            if (chilliQty > 0) pizzaDescription.push(Chilli Paneer Pizza (14") x ${chilliQty});
-            if (paneerQty > 0) pizzaDescription.push(Paneer Butter Masala Pizza (14") x ${paneerQty});
-
-            const descriptionList = document.getElementById("pizza-description");
-            descriptionList.innerHTML = pizzaDescription.map(item => <li>${item}</li>).join('');
-        }
-
-        document.querySelectorAll('.quantity').forEach(input => {
-            input.addEventListener('input', updatePrice);
-        });
-
-        updatePrice();
-    </script>
     
 <script>
     function updatePrice() {
