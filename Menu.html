@@ -343,25 +343,32 @@
 
     updatePrice();
 </script>
-          
-            <!-- Order Form -->
-            <div class="order-summary">
-                <h3>Order Details</h3>
-                <form action="https://formspree.io/f/mzzbovao" method="POST">
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
+<form action="https://formspree.io/f/mzzbovao" method="POST">
+    <!-- User's Name, Email, and Phone fields (no change) -->
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
 
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
 
-                    <label for="phone">Your Phone:</label>
-                    <input type="tel" id="phone" name="phone" required><br><br>
+    <label for="phone">Your Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
 
-                    <label for="delivery_date">Delivery Date & Time:</label>
-                    <input type="datetime-local" id="delivery_date" name="delivery_date" required><br><br>
+    <label for="delivery_date">Delivery Date & Time:</label>
+    <input type="datetime-local" id="delivery_date" name="delivery_date" required><br><br>
 
-                    <button type="submit">Place Order</button>
-                </form>
+    <!-- Hidden Inputs for Selected Pizzas, Add-ons, and Quantities -->
+    <input type="hidden" id="selected_pizzas" name="selected_pizzas">
+    <input type="hidden" id="add_ons" name="add_ons">
+    <input type="hidden" id="quantities" name="quantities">
+
+    <!-- Customer Comments -->
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>
+
+    <button type="submit">Place Order</button>
+</form>
+
             </div>
         </section>
     </main>
